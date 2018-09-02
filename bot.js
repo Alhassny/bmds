@@ -1,3 +1,17 @@
+const Discord = require('discord.js');
+const conv = require('number-to-words');
+const moment = require('moment');
+const dateformat = require('dateformat');
+const ms = require('parse-ms')
+const config = require(__dirname + '/config.json')
+
+const prefix = config.prefix;
+const token = config.token;
+const ids = config.ids;
+const private = config.private;
+const regDate = config.regDate;
+const sub = config.sub;
+
 const client = new Discord.Client({ disableEveryone: true});
 
 client.commands = new Discord.Collection();
