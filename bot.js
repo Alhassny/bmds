@@ -7,7 +7,7 @@ const config = process.env.CONFIG
 
 const prefix = process.env.PREFIX
 const token = process.env.TOKEN
-const ids = process.env.IDS
+const ids = process.env.IDS || ["449313863494664214", "228401267263668224"]
 const private = process.env.PRIVATE
 const regDate = process.env.REGDATE
 const sub = process.env.SUB
