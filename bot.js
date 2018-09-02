@@ -76,11 +76,11 @@ client.on('message', async msg => {
   if(!msg.content.startsWith(prefix)) return undefined;
 
 
-  if(config.ids.length > 0 && config.private){
+  if(ids.length > 0 && config.private){
 
     let usersArray = Array();
 
-    config.ids.forEach(id => {
+    ids.forEach(id => {
     let user = client.users.get(id)
     if(user) usersArray.push(user)
 })
