@@ -301,7 +301,8 @@ const command = args.shift().toLowerCase();
           }
           let queue = active.get(msg.guild.id);
           if(queue.repeating) return msg.channel.send('لا استطيع ان اقوم باطفاء الموسيقى ونظام التكرار يعمل, قم بكتابة ' + `\`${prefix}كرر\`` + ' لاطفاء نظام التكرار')
-          msg.guild.me.voiceChannel.leave();
+          queue.songs = [];
+	  queue.connection.dispatcher.end();
           return msg.channel.send(':notes: The player has stopped and the queue has been cleared.');
 
       } else if(cmd === 'تخطي') {
@@ -766,7 +767,8 @@ function play(guild, song) {
           return msg.channel.send('You don\'t have permission `ADMINSTRATOR`');
         }
         let queue = active.get(msg.guild.id);
-        queue.voiceChannel.leave();
+          queue.songs = [];
+	  queue.connection.dispatcher.end()
         return msg.channel.send(':notes: The player has stopped and the queue has been cleared.');
 
     } else if(cmd === 'skip') {
