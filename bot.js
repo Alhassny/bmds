@@ -678,6 +678,7 @@ client.on('message', message => {
  **جميع الحقوق محفوظة ألى متجر بتر ستور
  BetterStore..**`
   if(message.content === prefix + 'help') {
+	  msg.react('🎼');
     message.author.send(helplist);
   }
 });
