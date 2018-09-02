@@ -649,10 +649,6 @@ client.on('message', message => {
 client.on('message', message => {
   var helplist = `**${client.user.tag}** commands:
 
-  ` + '`' + prefix + 'عن` - **شرح معلومات البوت**' + `
-  ` + '`' + prefix + 'سرعه` - **سرعه البوت**' + `
-
-
   :notes: __**أوامر الموسيقى**__` + `
   ` + '`' + prefix + 'شغل` - **لتشغيل الموسيقى**' + `
   ` + '`' + prefix + 'تخطي` - **لتصويت تخطي الأغنية**' + `
