@@ -631,7 +631,7 @@ client.on('message', message => {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       message.member.voiceChannel.leave()
-        .then(connection => { // Connection is an instance of VoiceConnection
+        .then(leave => { // Connection is an instance of VoiceConnection
           message.reply('I have **successfully** leave to the **channel**!');
         })
         .catch(console.log);
